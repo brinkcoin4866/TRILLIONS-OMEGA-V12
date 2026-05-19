@@ -19332,7 +19332,7 @@ async function trillionsKernelBench(){
   out.tests.fs_extended_cache.read_MB_s*1000
  );
  out.performance={score,class:score>8000000?"STRONG_REAL_KERNEL":score>2500000?"GOOD_REAL_KERNEL":"STANDARD_REAL_KERNEL"};
- out.total_ms:+(performance.now()-t0).toFixed(2);
+ out.total_ms = +(performance.now()-t0).toFixed(2);
  fs.writeFileSync("TRILLIONS_RUNTIME_KERNEL_REAL_ONLY.json",JSON.stringify(out,null,2));
  return out;
 }
