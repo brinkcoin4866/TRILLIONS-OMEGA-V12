@@ -1,0 +1,19 @@
+{
+  "name":"trillions-real-core",
+  "version":"1.0.0",
+  "main":"app.js",
+  "scripts":{
+    "start":"node app.js",
+    "dev":"nodemon app.js"
+  },
+  "dependencies":{
+    "axios":"latest",
+    "dotenv":"latest",
+    "express":"latest",
+    "socket.io":"latest",
+    "systeminformation":"latest"
+  },
+  "devDependencies":{
+    "nodemon":"latest"
+  }
+}
