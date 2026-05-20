@@ -30559,3 +30559,68 @@ asyncStorm : true
 }
 
 };
+
+const TRILLIONS_CPU_NATIVE_COMPILE_PROFILE = {
+  target: "CURRENT_CPU_NATIVE",
+  detected: {
+    SSE: true,
+    SSE2: true,
+    SSE3: true,
+    SSSE3: true,
+    SSE4_1: true,
+    SSE4_2: true,
+    AVX: true,
+    AVX2: true,
+    AVX512F: true,
+    AVX512DQ: true,
+    AVX512CD: true,
+    AVX512BW: true,
+    AVX512VL: true,
+    AVX512VNNI: true,
+    AVX512VBMI: true,
+    AVX512VBMI2: true,
+    AVX512BITALG: true,
+    AVX512VPOPCNTDQ: true,
+    FMA: true,
+    AES_NI: true,
+    SHA_NI: true,
+    BMI1: true,
+    BMI2: true,
+    ADX: true,
+    VAES: true,
+    VPCLMULQDQ: true,
+    GFNI: true,
+    RDRAND: true,
+    RDSEED: true
+  },
+  compilerFlags: [
+    "-O3",
+    "-march=native",
+    "-mtune=native",
+    "-funroll-loops",
+    "-flto",
+    "-mavx",
+    "-mavx2",
+    "-mavx512f",
+    "-mavx512dq",
+    "-mavx512bw",
+    "-mavx512vl",
+    "-mavx512vnni",
+    "-mfma",
+    "-maes",
+    "-msha",
+    "-mbmi",
+    "-mbmi2",
+    "-madx",
+    "-mvaes",
+    "-mvpclmulqdq",
+    "-mgfni"
+  ],
+  runtimePolicy: {
+    nodejs: "ORCHESTRATION",
+    nativeAddon: "HEAVY_COMPUTE",
+    simd: "FULL_NATIVE_WHEN_COMPILED",
+    fallback: "JS_SAFE_FALLBACK",
+    honesty: "CPU_SUPPORT_OK_BUT_NODE_JS_NEEDS_NATIVE_MODULES_TO_FULLY_USE_SIMD"
+  }
+};
