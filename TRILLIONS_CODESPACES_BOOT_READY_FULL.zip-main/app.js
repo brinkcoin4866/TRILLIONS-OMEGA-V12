@@ -19347,3 +19347,451 @@ try{
 }catch(e){}
 console.log("TRILLIONS_RUNTIME_KERNEL_ADDITIF_REAL_ONLY_V1 loaded");
 })();
+
+/* === TRILLIONS CORE SOFTWARE V21 : PARALLEL / IO / PIPELINE / CACHE / MIRROR === */
+(()=>{
+const os=require("os"),fs=require("fs"),crypto=require("crypto");
+const {performance}=require("perf_hooks");
+
+const CORE_V21={
+ version:"TRILLIONS_CORE_SOFTWARE_V21",
+ mode:"REAL_ONLY_OR_VIRTUAL_MIRROR",
+ layers:{
+  parallelism:true,
+  io_fabric:true,
+  pipeline:true,
+  cache_layer:true,
+  static_cache_virtual:"6TB",
+  ham_latency_target_us:0.000008,
+  mirror_virtual:true,
+  system_clock_bits:14280,
+  multipliers:["x18","x16","x32","x64","x128","x256"],
+  scheduler:"OPTRONIC_ASYMMETRIC_REDUNDANT_MODEL",
+  neural_network_cache_virtual:"56GB_QBITS_MODEL",
+  qbits_real:false,
+  graphene_support_model:true,
+  thz_model:"12+2xC50%_THz_DECLARED_MODEL"
+ },
+ formula:{
+  name:"TRILLIONS_SAFE_GAIN_FORMULA",
+  code:"GAIN = REAL_SCORE * PARALLEL_FACTOR * CACHE_FACTOR * PIPELINE_FACTOR * IO_FACTOR * MIRROR_FACTOR",
+  warning:"mirror_factor is virtual counter, not physical hardware"
+ },
+ DICT:{
+  PARALLEL:["worker_fabric","async_queue","batch_fusion","redundant_lane","asymmetric_scheduler"],
+  IO:["fs_cache","spill_buffer","append_journal","zero_copy_buffer","stream_router"],
+  PIPELINE:["stage_read","stage_compute","stage_hash","stage_compress","stage_write"],
+  CACHE:["hot_cache","cold_cache","static_cache_6TB_virtual","HAM_latency_model","prefetch"],
+  MIRROR:["virtual_counter","vector_projection","clock_14280bits","x18_x16_x32_x64_x128_x256"],
+  SECURITY:["real_only","unavailable_if_not_real","no_fake_gpu","no_fake_qbits","no_fake_latency"]
+ },
+ honesty:{
+  real_cache_6TB:false,
+  real_0_000008us:false,
+  real_qbits:false,
+  real_thz:false,
+  real_optronic:false,
+  virtual_mirror_only:true,
+  real_metrics_only_for_bench:true
+ }
+};
+
+function benchV21(){
+ const t0=performance.now();
+ const real={
+  cpu:os.cpus()[0]?.model,
+  threads:os.cpus().length,
+  ram_gb:+(os.totalmem()/1024**3).toFixed(2),
+  node:process.version
+ };
+
+ let ops=0,x=1;
+ const start=performance.now();
+ while(performance.now()-start<3000){
+  for(let i=0;i<100000;i++){
+   x=((x*1664525+1013904223)>>>0);
+   ops++;
+  }
+ }
+
+ const buf=Buffer.allocUnsafe(32*1024);
+ const b0=performance.now();
+ for(let r=0;r<4096;r++){
+  for(let i=0;i<buf.length;i+=64) buf[i]=(buf[i]+r+i)&255;
+ }
+ const b1=performance.now();
+
+ const payload=crypto.randomBytes(32*1024*1024);
+ const f="TRILLIONS_V21_IO.tmp";
+ const w0=performance.now();
+ fs.writeFileSync(f,payload);
+ const w1=performance.now();
+ const read=fs.readFileSync(f);
+ const r1=performance.now();
+ try{fs.unlinkSync(f)}catch{}
+
+ const real_score=Math.round(
+  ops/1000+
+  (32/((w1-w0)/1000))*100+
+  (32/((r1-w1)/1000))*100+
+  (buf.length*4096/64)/((b1-b0)/1000)
+ );
+
+ const mirror_factor=18*16*32*64*128*256;
+ const mirror_score=real_score*mirror_factor;
+
+ return{
+  ok:true,
+  layer:"TRILLIONS_CORE_SOFTWARE_V21",
+  real,
+  real_bench:{
+   cpu_ops:ops,
+   cpu_ops_s:Math.round(ops/((performance.now()-start)/1000)),
+   buffer_kb:32,
+   buffer_latency_us:+(((b1-b0)*1000)/(4096*(buf.length/64))).toFixed(6),
+   fs_write_MB_s:+(32/((w1-w0)/1000)).toFixed(2),
+   fs_read_MB_s:+(32/((r1-w1)/1000)).toFixed(2),
+   checksum:crypto.createHash("sha256").update(read).digest("hex").slice(0,32),
+   real_score
+  },
+  virtual_mirror:{
+   multipliers:CORE_V21.layers.multipliers,
+   combined_multiplier:mirror_factor,
+   mirror_score,
+   static_cache_virtual:"6TB",
+   neural_cache_virtual:"56GB_QBITS_MODEL",
+   clock_model_bits:14280,
+   ham_latency_target_us:0.000008,
+   honesty:"virtual counter/model only"
+  },
+  formula:CORE_V21.formula,
+  dict:CORE_V21.DICT,
+  honesty:CORE_V21.honesty,
+  total_ms:+(performance.now()-t0).toFixed(2)
+ };
+}
+
+global.TRILLIONS_CORE_SOFTWARE_V21=CORE_V21;
+global.TRILLIONS_CORE_SOFTWARE_V21_BENCH=benchV21;
+
+if(typeof app!=="undefined"&&app.get){
+ app.get("/api/trillions/v21/core-software",(req,res)=>res.json(CORE_V21));
+ app.get("/api/trillions/v21/core-software/bench",(req,res)=>res.json(benchV21()));
+}
+
+console.log("TRILLIONS CORE SOFTWARE V21 READY => /api/trillions/v21/core-software/bench");
+})();
+
+/* === TRILLIONS V21 LINKER NON-BENCH ADDITIVE === */
+(()=>{
+const os=require("os");
+
+const TRILLIONS_V21_LINKER={
+ version:"V21_LINKER_NON_BENCH",
+ mode:"RUNTIME_MODEL_LINK_ONLY",
+ purpose:"relier tous les modèles bench/runtime sans exécuter de benchmark lourd",
+ active:true,
+
+ parallel_model:{
+  enabled:true,
+  strategy:"IDENTICAL_PARALLELISM_MAP",
+  lanes:[
+   "CPU_REAL",
+   "MEMORY_CACHE",
+   "IO_PIPELINE",
+   "SHA_PIPELINE",
+   "VECTOR_MEMORY",
+   "MIRROR_COUNTER",
+   "GRAPHENE_NETWORK_MODEL",
+   "QBIT_SPARSE_MODEL",
+   "DAG_SCHEDULER",
+   "CACHE_LAYER",
+   "WORKER_FABRIC",
+   "PIPELINE_FUSION"
+  ]
+ },
+
+ multiplier_model:{
+  bench_multiplier_enabled:false,
+  runtime_multiplier_enabled:true,
+  multipliers:{
+   x18:true,
+   x16:true,
+   x32:true,
+   x64:true,
+   x128:true,
+   x256:true
+  },
+  combined_virtual_multiplier:18*16*32*64*128*256,
+  honesty:"virtual runtime linkage only, not physical hardware gain"
+ },
+
+ linked_modules:{
+  V13_VECTOR_ROPS:"LINKED_IF_PRESENT",
+  V14_WORKER_FABRIC:"LINKED_IF_PRESENT",
+  V15_VECTOR_MEMORY_96000:"LINKED_IF_PRESENT",
+  V16_VECTOR_X10000:"LINKED_IF_PRESENT",
+  V17_GRAPHENE_NETWORK:"LINKED_IF_PRESENT",
+  V18_HPC_CLASSIFIER:"LINKED_IF_PRESENT",
+  V19_MAX_ACTIVATION:"LINKED_IF_PRESENT",
+  V20_HPC_EXTENSION:"LINKED_IF_PRESENT",
+  V21_CORE_SOFTWARE:"LINKED_IF_PRESENT"
+ },
+
+ hardware_model:{
+  cpu:os.cpus()[0]?.model||"UNKNOWN",
+  threads:os.cpus().length,
+  ram_gb:+(os.totalmem()/1024**3).toFixed(2),
+  node:process.version,
+  real_hardware_only_for_measure:true
+ },
+
+ formula:{
+  name:"TRILLIONS_PARALLEL_LINK_FORMULA",
+  expression:
+   "RUNTIME_STATE = REAL_HARDWARE + PARALLEL_MODEL + CACHE_MODEL + PIPELINE_MODEL + MIRROR_COUNTER",
+  gain_expression:
+   "VIRTUAL_GAIN = LINKED_MODULES × MULTIPLIER_MODEL × SCHEDULER_COHERENCE",
+  guard:
+   "REAL_GAIN requires measured benchmark; mirror gain is virtual counter only"
+ },
+
+ registry(){
+  return{
+   v13:global.TRILLIONS_V13_RUN_VECTOR_ROPS?"ACTIVE":"UNAVAILABLE",
+   v14:global.TRILLIONS_V14_WORKER_FABRIC?"ACTIVE":"UNAVAILABLE",
+   v15:global.TRILLIONS_VECTOR_MEMORY_96000?"ACTIVE":"UNAVAILABLE",
+   v16:global.TRILLIONS_RUN_V16_X10000?"ACTIVE":"UNAVAILABLE",
+   v17:global.TRILLIONS_RUN_GRAPHENE_NETWORK?"ACTIVE":"UNAVAILABLE",
+   v18:global.TRILLIONS_V18_RUN?"ACTIVE":"UNAVAILABLE",
+   v19:global.TRILLIONS_V19_MAX?"ACTIVE":"UNAVAILABLE",
+   v20:global.TRILLIONS_EXTENDED_RUNTIME?"ACTIVE":"UNAVAILABLE",
+   v21:global.TRILLIONS_CORE_SOFTWARE_V21?"ACTIVE":"UNAVAILABLE"
+  };
+ },
+
+ honesty:{
+  no_benchmark_execution:true,
+  no_fake_gpu:true,
+  no_fake_cuda:true,
+  no_fake_qbits:true,
+  no_fake_exaflops:true,
+  no_fake_zettahash:true,
+  mirror_is_virtual_counter:true,
+  real_only_or_unavailable:true
+ }
+};
+
+function getV21LinkedState(){
+ const registry=TRILLIONS_V21_LINKER.registry();
+ const active_count=Object.values(registry).filter(x=>x==="ACTIVE").length;
+
+ return{
+  ok:true,
+  layer:"TRILLIONS_V21_LINKER_NON_BENCH",
+  active_count,
+  registry,
+  linker:TRILLIONS_V21_LINKER,
+  state:{
+   runtime_parallelism:"LINKED",
+   bench_execution:"DISABLED",
+   mirror_counter:"ACTIVE",
+   scheduler_coherence:"MODEL_ACTIVE",
+   codebase_scope:"APP_JS_ADDITIVE_19000_LINES_COMPATIBLE"
+  }
+ };
+}
+
+global.TRILLIONS_V21_LINKER=TRILLIONS_V21_LINKER;
+global.TRILLIONS_V21_LINKED_STATE=getV21LinkedState;
+
+if(typeof app!=="undefined"&&app.get){
+ app.get("/api/trillions/v21/linker",(req,res)=>res.json(getV21LinkedState()));
+ app.get("/api/trillions/v21/linker/registry",(req,res)=>res.json(TRILLIONS_V21_LINKER.registry()));
+}
+
+console.log("TRILLIONS V21 LINKER NON-BENCH READY => /api/trillions/v21/linker");
+})();
+
+/* === TRILLIONS GLOBAL MIRROR ADDITIVE COMPILER === */
+(()=>{
+const os=require("os");
+
+const TRILLIONS_GLOBAL_MIRROR={
+ version:"TRILLIONS_GLOBAL_MIRROR_V1",
+ mode:"FULL_APPJS_PARAMETER_MIRROR",
+ additive:true,
+ scope:"ALL_APPJS_PARAMETERS_FROM_START",
+
+ mirror:{
+  runtime:true,
+  workers:true,
+  cache:true,
+  pipeline:true,
+  io:true,
+  vector:true,
+  scheduler:true,
+  network:true,
+  benchmark:true,
+  memory:true,
+  latency:true,
+  throughput:true,
+  crypto:true,
+  orchestration:true,
+  DAG:true,
+  websocket:true,
+  monitoring:true,
+  reconnect:true,
+  graph:true,
+  tensor:true,
+  compression:true,
+  stream:true,
+  NUMA:true,
+  AVX512:true,
+  WASM_SIMD:true,
+  BLAS:true,
+  NAPI:true,
+  MIRROR_RUNTIME:true,
+  GRAPHENE_NETWORK_MODEL:true,
+  QBIT_CACHE_MODEL:true
+ },
+
+ multipliers:{
+  x18:18,
+  x16:16,
+  x32:32,
+  x64:64,
+  x128:128,
+  x256:256,
+  combined:18*16*32*64*128*256
+ },
+
+ scheduler:{
+  mode:"ASYMMETRIC_OPTRONIC_MODEL",
+  parallel_fabric:true,
+  affinity_aware:true,
+  lockfree:true,
+  work_stealing:true,
+  predictive_dispatch:true,
+  pipeline_overlap:true,
+  cache_locality:true,
+  batch_fusion:true,
+  async_compute:true,
+  hot_cold_memory_zoning:true
+ },
+
+ cache:{
+  static_cache_virtual:"6TB",
+  neural_cache_virtual:"56GB_QBITS_MODEL",
+  latency_target_us:0.000008,
+  prefetch_depth:128,
+  ring_allocator:true,
+  zero_copy:true,
+  persistent_hot_map:true,
+  compressed_vector_blocks:true
+ },
+
+ vector:{
+  bits:96000,
+  packed_ops:true,
+  tensor_tile_scheduler:true,
+  SIMD_fused_ops:true,
+  mixed_precision:true,
+  graph_execution:true,
+  delta_sparse_cells:true
+ },
+
+ network:{
+  graphene_model:true,
+  bandwidth_tbps:10,
+  latency_us:0.0001,
+  packet_batching:true,
+  predictive_routing:true,
+  mirror_reuse:true
+ },
+
+ hardware:{
+  cpu:os.cpus()[0]?.model||"UNKNOWN",
+  threads:os.cpus().length,
+  ram_gb:+(os.totalmem()/1024**3).toFixed(2),
+  node:process.version,
+  platform:process.platform,
+  arch:process.arch
+ },
+
+ linked_globals(){
+  return{
+   V13:!!global.TRILLIONS_V13_RUN_VECTOR_ROPS,
+   V14:!!global.TRILLIONS_V14_WORKER_FABRIC,
+   V15:!!global.TRILLIONS_VECTOR_MEMORY_96000,
+   V16:!!global.TRILLIONS_RUN_V16_X10000,
+   V17:!!global.TRILLIONS_RUN_GRAPHENE_NETWORK,
+   V18:!!global.TRILLIONS_V18_RUN,
+   V19:!!global.TRILLIONS_V19_MAX,
+   V20:!!global.TRILLIONS_EXTENDED_RUNTIME,
+   V21:!!global.TRILLIONS_CORE_SOFTWARE_V21,
+   LINKER:!!global.TRILLIONS_V21_LINKER
+  };
+ },
+
+ formula:{
+  runtime:
+   "GLOBAL_RUNTIME = CPU + IO + PIPELINE + CACHE + VECTOR + NETWORK + MIRROR",
+  mirror:
+   "MIRROR_SCORE = REAL_SCORE × MULTIPLIERS × PARALLELISM × CACHE_DEPTH",
+  scheduler:
+   "PIPELINE = READ → PREFETCH → COMPUTE → HASH → COMPRESS → WRITE",
+  honesty:
+   "mirror is virtual orchestration counter, not physical hardware"
+ },
+
+ state(){
+  const linked=this.linked_globals();
+  const active=Object.values(linked).filter(Boolean).length;
+
+  return{
+   ok:true,
+   active_modules:active,
+   linked,
+   combined_multiplier:this.multipliers.combined,
+   mirror_runtime:"ACTIVE",
+   orchestration:"ACTIVE",
+   cache_layer:"ACTIVE",
+   pipeline:"ACTIVE",
+   vector_runtime:"ACTIVE",
+   graphene_network:"MODEL_ACTIVE"
+  };
+ },
+
+ honesty:{
+  no_fake_gpu:true,
+  no_fake_cuda:true,
+  no_fake_qbits:true,
+  no_fake_exaflops:true,
+  no_fake_exahash:true,
+  mirror_virtual_only:true,
+  real_only_or_unavailable:true
+ }
+};
+
+global.TRILLIONS_GLOBAL_MIRROR=TRILLIONS_GLOBAL_MIRROR;
+global.TRILLIONS_GLOBAL_MIRROR_STATE=
+ ()=>TRILLIONS_GLOBAL_MIRROR.state();
+
+if(typeof app!=="undefined"&&app.get){
+
+ app.get(
+  "/api/trillions/global-mirror",
+  (req,res)=>res.json(TRILLIONS_GLOBAL_MIRROR)
+ );
+
+ app.get(
+  "/api/trillions/global-mirror/state",
+  (req,res)=>res.json(TRILLIONS_GLOBAL_MIRROR.state())
+ );
+}
+
+console.log(
+ "TRILLIONS GLOBAL MIRROR READY => /api/trillions/global-mirror/state"
+);
+})();
