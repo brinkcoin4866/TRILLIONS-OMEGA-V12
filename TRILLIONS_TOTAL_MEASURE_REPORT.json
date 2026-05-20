@@ -1,0 +1,109 @@
+{
+  "benchmark": "TRILLIONS_TOTAL_REAL_MEASURE_PLUS_MIRROR",
+  "timestamp": "2026-05-19T22:24:37.757Z",
+  "system": {
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "threads": 2,
+    "base_ghz": 3.44,
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v24.14.0",
+    "ram_total_gb": 7.76,
+    "ram_free_gb": 2.42,
+    "ram_used_gb": 5.33
+  },
+  "real_runtime": {
+    "ops": 124957993,
+    "sec": 5.001,
+    "ops_s": 24986275,
+    "estimated_ghz": 3.44
+  },
+  "mirror_virtual": {
+    "vector_multiplier": 96000,
+    "ops": 11741242944000,
+    "sec": 5,
+    "ops_s": 2348248432876,
+    "boost_percent": 9398153.32,
+    "mirror_est_ghz": 322826.57,
+    "status": "VIRTUAL_COUNTER_MODEL_NOT_REAL_HARDWARE"
+  },
+  "crypto": {
+    "btc_sha256_cpu": {
+      "algo": "sha256",
+      "hashes": 999167,
+      "sec": 5,
+      "hash_s": 199832,
+      "kh_s": 199.832,
+      "mh_s": 0.199832,
+      "last_hash": "6ae8c1edb804f7a728d6a20e35005225b8c68698e40610e711eecea88a0e748e"
+    },
+    "eth_sha3_cpu_like": {
+      "algo": "sha3-256_ETH_LIKE_CPU_ONLY_NOT_REAL_ETHASH",
+      "hashes": 169954,
+      "sec": 5,
+      "hash_s": 33991,
+      "kh_s": 33.991,
+      "mh_s": 0.033991,
+      "last_hash": "d96f85a32f4181b0ae83cc45ea5fdf506e7cc8a41d41bb68e987ee1a5243e6a9"
+    },
+    "sha512_cpu": {
+      "algo": "sha512",
+      "hashes": 306125,
+      "sec": 3.001,
+      "hash_s": 102021,
+      "kh_s": 102.021,
+      "mh_s": 0.102021,
+      "last_hash": "8d248b00edbd807caf02175873a32c5831d0b84e1c120d316695875b01f98577edb989587e979d6f49f3a9f3184761fb23a0326996539cb9d017516b68d9d618"
+    }
+  },
+  "compute_units": {
+    "gops_s_real": 0.024986,
+    "tflops_like_real": 0.000024986,
+    "pflops_like_real": 2.4986e-8,
+    "exaflops_like_real": 2.4986e-11,
+    "note": "OPS/FLOPS-like JS CPU loop, not LINPACK, not GPU, not real exascale"
+  },
+  "memory": {
+    "size_mb": 128,
+    "write_MB_s": 1256.64,
+    "sparse_read_MB_s": 5737.51,
+    "checksum": 14680064
+  },
+  "filesystem": {
+    "size_mb": 128,
+    "write_MB_s": 1259.25,
+    "read_MB_s": 1651.36,
+    "sha256": "63215ae5e65b37f9a67a9498edfae4eef1e0477a39d151434e5eb3d2c13121c9"
+  },
+  "compression": {
+    "input_mb": 64,
+    "output_mb": 64.02,
+    "elapsed_ms": 1974.91,
+    "compress_MB_s": 32.41,
+    "ratio": 1.0003
+  },
+  "json": {
+    "items": 250000,
+    "size_mb": 8.45,
+    "stringify_ms": 52.45,
+    "parse_ms": 115.08,
+    "json_MB_s": 50.44,
+    "check": 250000
+  },
+  "latency": {
+    "samples": 200000,
+    "p50_us": 0.044,
+    "p95_us": 0.103,
+    "p99_us": 0.128
+  },
+  "honesty": {
+    "no_simulation": true,
+    "no_fake_gpu": true,
+    "no_fake_cuda": true,
+    "no_fake_asic": true,
+    "no_fake_btc_mining": true,
+    "no_fake_eth_mining": true,
+    "mirror_is_virtual_counter": true,
+    "real_measured_only_for_cpu_ram_fs_crypto": true
+  }
+}
