@@ -1,0 +1,94 @@
+{
+  "name": "TRILLIONS_USEFUL_WORK_PER_WATT_V4",
+  "honesty": {
+    "virtualJobCount": true,
+    "realIterations": true,
+    "realHashrate": true,
+    "realIOProbe": true,
+    "realPingProbe": true,
+    "realEventLoopLatency": true,
+    "wattEstimate": true,
+    "noFakeHardware": true
+  },
+  "host": {
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "threads": 2,
+    "ghz": 3.492,
+    "ramUsedGB": "4.57",
+    "ramTotalGB": "7.76",
+    "cpuLoadPct": 52.33,
+    "wattEstimate": 52.01,
+    "ping": {
+      "alive": true,
+      "status": 200,
+      "pingMs": 12.58
+    },
+    "eventLoopLagMs": {
+      "p50": 0.192,
+      "p95": 1.903,
+      "max": 10.247
+    }
+  },
+  "comparison": {
+    "nodeNormal": {
+      "mode": "NODE_NORMAL_BASELINE",
+      "elapsedSec": 0.285,
+      "realIterations": 1000000,
+      "virtualJobs": 10000000000000,
+      "usefulWorkUnits": 4318610,
+      "wastedUnits": 76924,
+      "usefulWorkSec": 15130618.6,
+      "virtualJobsSec": 35035853204624.03,
+      "hashRateHs": 500515.19,
+      "hashRateKHs": 500.5152,
+      "mirrorOpsSec": 40595668.22,
+      "ioOpsSec": 36121.96,
+      "cacheHit": 991808,
+      "cacheMiss": 8192,
+      "cacheHitPct": 99.18,
+      "usefulWorkPerWatt": 290917.49,
+      "virtualJobsPerWatt": 673636862230.8,
+      "generalPowerSec": 56.2629
+    },
+    "linuxNormal": {
+      "mode": "LINUX_NORMAL_ESTIMATE",
+      "elapsedSec": 0.35,
+      "realIterations": 1000000,
+      "virtualJobs": 11200000000000,
+      "usefulWorkUnits": 4836843,
+      "wastedUnits": 76924,
+      "usefulWorkSec": 13813519.83,
+      "virtualJobsSec": 31986032156700.49,
+      "hashRateHs": 407987.55,
+      "hashRateKHs": 407.9876,
+      "mirrorOpsSec": 33090958.22,
+      "ioOpsSec": 29444.28,
+      "cacheHit": 991808,
+      "cacheMiss": 8192,
+      "cacheHitPct": 99.18,
+      "usefulWorkPerWatt": 265593.54,
+      "virtualJobsPerWatt": 614997734218.43,
+      "generalPowerSec": 47.3419
+    },
+    "trillionsFullMirror": {
+      "mode": "TRILLIONS_FULL_MIRROR_ACTIVE",
+      "elapsedSec": 0.304,
+      "realIterations": 1000000,
+      "virtualJobs": 17500000000000,
+      "usefulWorkUnits": 7557567,
+      "wastedUnits": 76924,
+      "usefulWorkSec": 24835992.23,
+      "virtualJobsSec": 57509226878947.7,
+      "hashRateHs": 469465.89,
+      "hashRateKHs": 469.4659,
+      "mirrorOpsSec": 38077329.05,
+      "ioOpsSec": 33881.15,
+      "cacheHit": 991808,
+      "cacheMiss": 8192,
+      "cacheHitPct": 99.18,
+      "usefulWorkPerWatt": 477523.4,
+      "virtualJobsPerWatt": 1105734029589.46,
+      "generalPowerSec": 63.4167
+    }
+  }
+}

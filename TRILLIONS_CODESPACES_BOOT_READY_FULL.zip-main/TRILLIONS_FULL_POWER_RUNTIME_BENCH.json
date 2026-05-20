@@ -1,0 +1,35 @@
+{
+  "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+  "threads": 2,
+  "ram": {
+    "totalGB": "7.76",
+    "usedGB": "4.20"
+  },
+  "runtimeProbe": {
+    "alive": true,
+    "statusCode": 200,
+    "latencyMs": 8.29
+  },
+  "bench": {
+    "workers": 2,
+    "elapsedSec": 8.51,
+    "ops": 19200000,
+    "hashes": 1600000,
+    "mirrors": 204800000,
+    "megaOpsSec": 2.26,
+    "gigaFlops": 0.0023,
+    "hashRateKHs": 188.01,
+    "mirrorRate": 24065648,
+    "checksum": 1.75350019
+  },
+  "wattEstimate": 44,
+  "usefulPerWatt": 0.0514,
+  "finalScore": 9.74,
+  "honesty": {
+    "realWorkers": true,
+    "realHash": true,
+    "realCompute": true,
+    "noFakeSupercomputer": true,
+    "noFakeAsic": true
+  }
+}

@@ -1,0 +1,69 @@
+nohup: ignoring input
+◇ injected env (4) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+[TRILLIONS][SIMD] ADDON NOT LOADED
+[TRILLIONS] DICT+HIDDEN+AUTO_ACCELERATOR additive block active: AVX512
+[TRILLIONS] HPC_SIMD_LAYER loaded: { avx2: true, avx512f: true, avx512bw: true, fma: true, sse4_2: true }
+[TRILLIONS] MINING_POOLS_ORCHESTRATOR loaded with BTC, ETH, XMR support
+[TRILLIONS] CROSS_LANGUAGE+ETT+PING+SURVIVAL additive block loaded
+[TRILLIONS] CPU REAL/VIRTUAL MIRROR loaded
+[TRILLIONS] CLUSTER SOVEREIGN TOTAL additive block loaded
+[TRILLIONS] HETEROGENEOUS_FABRIC_V1 additive block loaded
+[TRILLIONS] SOVEREIGN_FABRIC_V2 loaded
+[TRILLIONS] NEXT_ASCENSION_V3 loaded
+[TRILLIONS] REAL_ASCENSION_NEXT additive loaded 15
+[TRILLIONS_ASCENSION_APPJS_ADDITIVE_V1] READY 14 DICTS
+[TRILLIONS] REAL eBPF/perf + GPU probe block loaded
+[TRILLIONS_V12] runtime core additive loaded
+TRILLIONS V12 STANDARD PLUS BENCH routes: /api/trillions/v12/standard-plus
+[TRILLIONS] VECTOR/BILATERAL/ROPS/TENSOR ADDON V12.7 READY
+[TRILLIONS] PCORE BUFFER SUPERCALC ADDON V12.8 READY
+[TRILLIONS] QN NEURAL QUBIT CELL FABRIC V12.9 READY
+[TRILLIONS] SHA256 16K/32K UTXO WRAPPED ADDON V13.0 READY
+TRILLIONS V13 VECTOR/ROPS ADDITIVE READY => /api/trillions/v13/vector-rops
+TRILLIONS NVIDIA ROPS/TENSOR/CUDA/APEX READY => /api/trillions/v13/nvidia-apex
+TRILLIONS MEMORY MIRROR READY => /api/trillions/v13/memory-mirror
+TRILLIONS V14 WORKER FABRIC READY => /api/trillions/v14/worker-fabric
+TRILLIONS VECTOR MEMORY 96000 READY
+TRILLIONS V16 VECTOR MEMORY X10000 READY => /api/trillions/v16/vector-x10000
+TRILLIONS V17 GRAPHENE NETWORK READY => /api/trillions/v17/graphene-network
+TRILLIONS V19 HPC CATALOG LOADED 10 sections
+TRILLIONS ADDITIVE MAX LOADED 20 runtime features injected
+[TRILLIONS] ULTRA ADDITIVE EXTENSION LOADED 19 features
+TRILLIONS_RUNTIME_KERNEL_ADDITIF_REAL_ONLY_V1 loaded
+TRILLIONS CORE SOFTWARE V21 READY => /api/trillions/v21/core-software/bench
+TRILLIONS V21 LINKER NON-BENCH READY => /api/trillions/v21/linker
+TRILLIONS GLOBAL MIRROR READY => /api/trillions/global-mirror/state
+TRILLIONS V22 RUNTIME FABRIC READY
+ROUTES => /api/trillions/v22/status /telemetry /vector /io /parallel-bench
+TRILLIONS V23 DISTRIBUTED ORCHESTRATION READY
+TRILLIONS V24 HYPERFABRIC READY
+TRILLIONS V25 COGNITIVE ORCHESTRATION READY
+TRILLIONS V26 AUTONOMIC SAFE FABRIC READY
+TRILLIONS V27 IO/SIMD/CODEX RANDOM ACCESS READY
+TRILLIONS V28 MEMORY-IO HYPERGRAPH READY
+TRILLIONS V29 TITAN AI HYPERCORE READY
+2026-05-20 11:06:10.649001: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+TRILLIONS V30 UNIVERSAL AI LIBRARY FABRIC READY
+TRILLIONS V31 OMEGA UNIFIED FABRIC READY
+TRILLIONS V32 CRYPTOGRAPHIC MICROCONTROLLER FABRIC READY
+TRILLIONS V33 UNIVERSAL AUTO-ACTIVATOR READY
+node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at node:net:2274:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2044:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 3000
+}
+
+Node.js v24.15.0

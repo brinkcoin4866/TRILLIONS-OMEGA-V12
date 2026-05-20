@@ -1,0 +1,54 @@
+{
+  "name": "TRILLIONS_REAL_BENCH_EOF_V2",
+  "started": "2026-05-20T14:16:57.103Z",
+  "finished": "2026-05-20T14:17:04.641Z",
+  "mode": "REAL_MEASURED_WHERE_AVAILABLE_ESTIMATED_WATT",
+  "path": "/workspaces/TRILLIONS-OMEGA-V12/TRILLIONS_CODESPACES_BOOT_READY_FULL.zip-main",
+  "node": "v24.15.0",
+  "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+  "threads": 2,
+  "memory": {
+    "usedGB": "3.73",
+    "totalGB": "7.76"
+  },
+  "disk": {
+    "totalGB": "31.33",
+    "freeGB": "7.62",
+    "usedGB": "23.70",
+    "usedPct": 75.67
+  },
+  "idleCpuLoadPct": 8.08,
+  "compute": {
+    "durationSec": 4,
+    "ops": 718500000,
+    "megaOpsSec": 179.62,
+    "cpuLoadPct": 64.12,
+    "checksum": 2.47990037
+  },
+  "memoryBench": {
+    "sizeMB": 64,
+    "writeMBs": 2673.21,
+    "readMBs": 65602.27,
+    "checksum": 0
+  },
+  "eventLoop": {
+    "samples": 148,
+    "lagAvgMs": 0.294,
+    "lagP50Ms": 0.19,
+    "lagP95Ms": 1.26,
+    "lagMaxMs": 2.822
+  },
+  "wattEstimate": 46.85,
+  "usefulMegaOpsPerWatt": 3.8339,
+  "stabilityScore": 97.48,
+  "finalEfficiencyScore": 373.73,
+  "honesty": {
+    "realCompute": true,
+    "realMemory": true,
+    "realEventLoop": true,
+    "realDiskStat": true,
+    "wattIsEstimate": true,
+    "noFakePower": true,
+    "noFakeSupercomputer": true
+  }
+}
