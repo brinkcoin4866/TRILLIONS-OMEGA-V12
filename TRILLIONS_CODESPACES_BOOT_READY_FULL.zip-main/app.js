@@ -30476,3 +30476,86 @@ ACTIVATE_TRILLIONS_ULTIMUM();
 /* =========================================================
    END Ω ULTIMUM PERFORMANCE CORE
    ========================================================= */
+
+const CPU_OPTIMIZATION = {
+
+AVX512 : true,
+AVX2 : true,
+FMA : true,
+AES_NI : true,
+SHA_NI : true,
+
+runtimeMode : "NATIVE_SIMD",
+
+compilerFlags : [
+"-O3",
+"-march=native",
+"-mavx2",
+"-mavx512f",
+"-mfma"
+]
+
+};
+
+const SIMD_RUNTIME = {
+
+enabled : true,
+
+vectorWidthBits : 512,
+
+preferredBatchSize : 16384,
+
+cryptoAcceleration : true,
+
+compressionAcceleration : true,
+
+mirrorAcceleration : true,
+
+scheduler : "AVX512_ADAPTIVE"
+
+};
+
+const TRILLIONS_RYZEN_9950X3D_PROFILE = {
+
+cpu : "Ryzen_9_9950X3D",
+
+simd : {
+
+SSE42 : true,
+AVX : true,
+AVX2 : true,
+FMA3 : true,
+AES_NI : true,
+SHA : true,
+BMI2 : true
+
+},
+
+compilerFlags : [
+
+"-O3",
+"-Ofast",
+"-march=native",
+"-mtune=native",
+"-funroll-loops",
+"-flto",
+"-mfma",
+"-mavx2",
+"-maes",
+"-msha",
+"-mbmi2"
+
+],
+
+runtime : {
+
+scheduler : "ZEN5_ADAPTIVE",
+cachePolicy : "X3D_PRIORITY",
+memoryMode : "DDR5_LOW_LATENCY",
+workerPolicy : "PERSISTENT",
+mirrorRuntime : true,
+asyncStorm : true
+
+}
+
+};
