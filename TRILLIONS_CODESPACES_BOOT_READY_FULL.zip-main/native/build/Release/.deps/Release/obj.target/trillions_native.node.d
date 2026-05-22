@@ -1,0 +1,1 @@
+cmd_Release/obj.target/trillions_native.node := g++ -o Release/obj.target/trillions_native.node -shared -pthread -rdynamic -m64  -Wl,-soname=trillions_native.node -Wl,--start-group Release/obj.target/trillions_native/src/trillions_native.o -Wl,--end-group 

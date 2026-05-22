@@ -1,0 +1,1 @@
+cmd_Release/trillions_native.node := ln -f "Release/obj.target/trillions_native.node" "Release/trillions_native.node" 2>/dev/null || (rm -rf "Release/trillions_native.node" && cp -af "Release/obj.target/trillions_native.node" "Release/trillions_native.node")
