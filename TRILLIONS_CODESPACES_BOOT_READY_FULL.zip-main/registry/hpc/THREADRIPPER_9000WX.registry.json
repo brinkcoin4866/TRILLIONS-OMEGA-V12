@@ -1,0 +1,11 @@
+{
+  "target": "AMD_THREADRIPPER_PRO_9000WX",
+  "topology": "EMULATED_HPC_FABRIC",
+  "numa_nodes": 8,
+  "virtual_ccd": 12,
+  "virtual_ccx": 24,
+  "virtual_l3": "384MB_EMULATED",
+  "scheduler": "HPC_BATCH_SCHEDULER",
+  "orchestration": "MASSIVE_PARALLEL_FABRIC",
+  "status": "EMULATED_PROFILE"
+}

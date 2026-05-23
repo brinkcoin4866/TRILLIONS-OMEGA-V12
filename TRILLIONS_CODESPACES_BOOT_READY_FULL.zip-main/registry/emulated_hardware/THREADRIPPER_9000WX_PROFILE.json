@@ -1,0 +1,15 @@
+{
+  "status": "EMULATED_PROFILE",
+  "role": "HPC CPU orchestration target",
+  "virtual_lanes": [
+    "NUMA",
+    "CCD",
+    "CCX",
+    "L3-cache",
+    "worker-pool",
+    "matrix-solver",
+    "AI-runtime"
+  ],
+  "scheduler_policy": "batch + priority + pressure guard",
+  "honesty": "not physical hardware inside Codespaces"
+}

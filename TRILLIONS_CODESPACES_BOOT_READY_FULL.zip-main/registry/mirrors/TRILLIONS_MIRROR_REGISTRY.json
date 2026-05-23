@@ -1,0 +1,10 @@
+{
+  "runtime_mirror": "ACTIVE",
+  "memory_mirror": "ACTIVE",
+  "disk_mirror": "ACTIVE",
+  "cache_mirror": "ACTIVE",
+  "workload_mirror": "ACTIVE",
+  "ui_mirror": "ACTIVE",
+  "telemetry_mirror": "ACTIVE",
+  "solver_mirror": "ACTIVE"
+}

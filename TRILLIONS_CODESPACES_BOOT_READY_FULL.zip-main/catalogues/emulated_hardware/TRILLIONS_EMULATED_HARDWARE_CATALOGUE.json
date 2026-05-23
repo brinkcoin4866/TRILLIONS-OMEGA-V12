@@ -1,0 +1,56 @@
+{
+  "time": "2026-05-22T09:33:23.736Z",
+  "doctrine": "REAL_ONLY_OR_UNAVAILABLE",
+  "mode": "EMULATED_HARDWARE_ORCHESTRATION_PROFILE",
+  "real_host": {
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "logical_cpus": 2,
+    "ram_gb": 7.76,
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "emulated_profiles": {
+    "threadripper_9000WX": {
+      "status": "EMULATED_PROFILE",
+      "role": "HPC CPU orchestration target",
+      "virtual_lanes": [
+        "NUMA",
+        "CCD",
+        "CCX",
+        "L3-cache",
+        "worker-pool",
+        "matrix-solver",
+        "AI-runtime"
+      ],
+      "scheduler_policy": "batch + priority + pressure guard",
+      "honesty": "not physical hardware inside Codespaces"
+    },
+    "antminer_S21_M26": {
+      "status": "EMULATED_PROFILE",
+      "role": "SHA256 ASIC orchestration target",
+      "algorithms": [
+        "SHA256"
+      ],
+      "bridge": "external ASIC required for real hashrate",
+      "honesty": "no real ASIC hashrate generated locally"
+    },
+    "goldshell_XT": {
+      "status": "EMULATED_PROFILE",
+      "role": "ASIC catalogue / bridge target",
+      "bridge": "external device required",
+      "honesty": "catalogue and routing only"
+    }
+  },
+  "virtual_coprocessors": {
+    "CPU_HPC_LANES": "ACTIVE",
+    "SHA256_ASIC_ROUTER": "EMULATED",
+    "ASIC_BRIDGE_MANAGER": "READY",
+    "MIRROR_TELEMETRY": "ACTIVE",
+    "WORKLOAD_SCHEDULER": "ACTIVE",
+    "PRESSURE_GUARD": "ACTIVE"
+  },
+  "local_reality_probe": {
+    "local_sha256_hs": 368708,
+    "note": "measured on current Codespaces host only"
+  }
+}

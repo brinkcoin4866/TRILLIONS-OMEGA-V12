@@ -1,0 +1,1 @@
+{"t":1779446965197,"type":"pressure_guard","data":{"cpu":139.5,"mem":1.868,"rss":155582464,"heapUsed":30377560,"heapTotal":62533632,"eventLoopP95":11.1657,"eventLoopP99":24.2647,"cache":3.93,"simd":100,"worker":0,"queue":0,"gpu":0,"ipc":0,"ping":0}}

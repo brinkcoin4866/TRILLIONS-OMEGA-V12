@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-05-22T15:11:50.596Z",
+  "doctrine": "REAL_ONLY_OR_UNAVAILABLE | NO_FAKE_GPU_CPU | SAFE_LOCAL_BENCH",
+  "support": {
+    "engine": "TRILLIONS_RVN_XTM_XMR",
+    "node": "v24.14.0",
+    "openssl": "3.5.5",
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "cores": 2,
+    "ram_gb": "7.76",
+    "arch": "x64",
+    "platform": "linux",
+    "gpu": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "categories": [
+      "RAVENCOIN_KAWPOW_STYLE_HASH",
+      "MONERO_RANDOMX_STYLE_HASH",
+      "XTM_HEAVY_CRYPTO_HASH",
+      "AUTO_ACCEL_DETECTION",
+      "YEARLY_HASH_PROJECTION"
+    ],
+    "honesty": "REAL_LOCAL_CPU_RUNTIME_ONLY; GPU detect only; no fake hashrate"
+  },
+  "benchmarks": [
+    {
+      "algo": "RAVENCOIN_KAWPOW_STYLE",
+      "loops": 250000,
+      "time_s": "7.5046",
+      "hash_rate": "33.313 KH/s",
+      "yearly_projection": "1.051 TH/s",
+      "raw_hps": 33313.039900007025,
+      "guard": 179
+    },
+    {
+      "algo": "MONERO_RANDOMX_STYLE",
+      "loops": 250000,
+      "time_s": "15.0466",
+      "hash_rate": "16.615 KH/s",
+      "yearly_projection": "523.971 GH/s",
+      "raw_hps": 16614.999099227127,
+      "guard": 101
+    },
+    {
+      "algo": "XTM_HEAVY_HASH",
+      "loops": 250000,
+      "time_s": "21.4162",
+      "hash_rate": "11.673 KH/s",
+      "yearly_projection": "368.132 GH/s",
+      "raw_hps": 11673.388240191984,
+      "guard": 143
+    }
+  ],
+  "latency": {
+    "p50_ms": "0.003165",
+    "p95_ms": "0.005110",
+    "p99_ms": "0.031081"
+  },
+  "notes": {
+    "ravencoin": "KAWPOW approximation benchmark workload",
+    "monero": "RandomX style CPU-heavy approximation",
+    "xtm": "Heavy crypto mixed workload",
+    "warning": "This is a local synthetic benchmark, not a real miner"
+  }
+}

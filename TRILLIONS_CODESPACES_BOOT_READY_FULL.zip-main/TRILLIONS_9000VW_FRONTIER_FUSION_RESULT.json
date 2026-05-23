@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-05-22T15:57:40.072Z",
+  "system": {
+    "name": "TRILLIONS",
+    "processor": "DUAL_THREADRIPPER_9000VW",
+    "mode": "NATIVE_VIRTUALIZED",
+    "scheduler": "TRILLIONS_ADAPTIVE_RUNTIME",
+    "orchestration": "ACTIVE",
+    "topology": "2x THREADRIPPER 9000VW VIRTUAL",
+    "execution": "REAL_CODESPACES_HOST"
+  },
+  "doctrine": {
+    "REAL_ONLY_OR_UNAVAILABLE": true,
+    "NO_FAKE_POWER": true,
+    "FRONTIER_REFERENCE_ONLY": true,
+    "VIRTUAL_CPU_IS_TOPOLOGY_ONLY": true
+  },
+  "host": {
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "threads": 2,
+    "ram_gb": "7.76",
+    "node": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "benchmark": {
+    "workloads": [
+      "BTC_SHA256D_STYLE",
+      "HEAVY_CRYPTO_MIX",
+      "UTXO_SCAN",
+      "CACHE_PRESSURE",
+      "LATENCY_STRESS"
+    ],
+    "trillions_real": {
+      "wall_time_s": "53.869071",
+      "operations": 3900000,
+      "aggregate_speed": "72.398 Kops/s",
+      "yearly_projection": "2.283 Tops/s",
+      "matched_utxo": 632812,
+      "satoshi_sum": 27913745668750,
+      "guard": 244
+    },
+    "frontier_reference": {
+      "frontier_fp64_reference": 1102000000000000000,
+      "theoretical_time_same_ops_s": 3.5390199637023595e-12,
+      "theoretical_speed": "1.102 Eops/s",
+      "note": "Frontier = référence exascale théorique externe"
+    },
+    "duel": {
+      "frontier_theoretical_seconds": "3.539020e-12",
+      "trillions_real_seconds": "53.869071",
+      "theoretical_ratio": "1.522147e+13",
+      "honest_result": "FRONTIER gagne en brute force exascale",
+      "trillions_strength": "orchestration, virtualisation, adaptabilité, Codespaces runtime"
+    }
+  }
+}

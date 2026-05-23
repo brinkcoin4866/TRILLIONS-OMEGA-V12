@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-05-22T16:02:06.783Z",
+  "architecture": {
+    "primary_system": "FRONTIER",
+    "secondary_runtime": "TRILLIONS",
+    "processor_layer": "DUAL_THREADRIPPER_9000VW",
+    "topology": "FRONTIER_CLUSTER_OVER_TRILLIONS_RUNTIME",
+    "execution": "REAL_CODESPACES_HOST",
+    "orchestration": "TRILLIONS_ACTIVE"
+  },
+  "frontier_virtual_cluster": {
+    "simulated_nodes": 9472,
+    "simulated_accelerators": 37888,
+    "trillions_virtual_threads": 1024,
+    "scheduler": "TRILLIONS_ADAPTIVE_CLUSTER",
+    "cache_mesh": "ACTIVE",
+    "io_fabric": "MULTI_QUEUE",
+    "numa": "VIRTUALIZED"
+  },
+  "doctrine": {
+    "REAL_ONLY_OR_UNAVAILABLE": true,
+    "NO_FAKE_EXAFLOPS": true,
+    "FRONTIER_IS_LOGICAL_CLUSTER": true,
+    "THREADRIPPER_IS_VIRTUAL_TOPOLOGY": true
+  },
+  "host": {
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "threads": 2,
+    "ram_gb": "7.76",
+    "node": "v24.14.0"
+  },
+  "benchmark": {
+    "workloads": [
+      "FRONTIER_HEAVY_KERNEL",
+      "BTC_SHA_STYLE",
+      "UTXO_SCAN",
+      "CACHE_PRESSURE",
+      "LATENCY_LOAD"
+    ],
+    "result": {
+      "wall_time_s": "109.418723",
+      "aggregate_speed": "45.696 Kops/s",
+      "yearly_projection": "1.441 Tops/s",
+      "matched_utxo": 791015,
+      "satoshi_sum": 38871069808290,
+      "guard": 233
+    }
+  },
+  "verdict": {
+    "mode": "FRONTIER virtualisé AU-DESSUS de TRILLIONS",
+    "strength": "cluster logique massif + orchestration TRILLIONS",
+    "honesty": "aucun vrai hardware Frontier présent dans Codespaces"
+  }
+}

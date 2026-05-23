@@ -1,0 +1,9 @@
+{
+  "status": "EMULATED_PROFILE",
+  "role": "SHA256 ASIC orchestration target",
+  "algorithms": [
+    "SHA256"
+  ],
+  "bridge": "external ASIC required for real hashrate",
+  "honesty": "no real ASIC hashrate generated locally"
+}

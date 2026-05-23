@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-05-22T11:29:39.399Z",
+  "system": {
+    "memory_gb": 8.33,
+    "free_gb": 5.86,
+    "uptime_sec": 1513.89
+  },
+  "cpu": {
+    "model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "count": 2,
+    "speed_ghz": "3.39",
+    "cores": 2,
+    "flags": {
+      "AVX512": true,
+      "AVX2": true,
+      "AVX": true,
+      "FMA": true,
+      "AES": false,
+      "SHA": true
+    }
+  },
+  "os_type": {
+    "platform": "linux",
+    "type": "Linux",
+    "arch": "x64",
+    "release": "6.8.0-1044-azure"
+  },
+  "software": {},
+  "crypto": {
+    "sha256": "✅",
+    "sha512": "✅",
+    "aes256": "✅ Software",
+    "time_ms": "0.59"
+  },
+  "simd": {
+    "saxpy_ms": "4.68",
+    "ops_per_sec": 42763186
+  },
+  "classification": {
+    "category": "🖥️ Desktop Workstation",
+    "strength": "Standard + AVX512"
+  }
+}

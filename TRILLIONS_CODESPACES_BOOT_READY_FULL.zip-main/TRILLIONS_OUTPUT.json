@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-05-22T13:26:17.029Z",
+  "sha256": {
+    "iterations": 100000,
+    "time_ms": "390.54",
+    "rate": 256055
+  },
+  "sha512": {
+    "iterations": 50000,
+    "time_ms": "228.99",
+    "rate": 218350
+  },
+  "compute": {
+    "vectors": 100000,
+    "time_ms": "2.44",
+    "ops": 81999307
+  },
+  "mining": {
+    "iterations": 1000000,
+    "nonces": 62326,
+    "time_ms": "2690.62",
+    "rate": 371661
+  }
+}

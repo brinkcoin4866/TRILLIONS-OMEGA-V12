@@ -1,0 +1,42 @@
+[
+  {
+    "name": "TRILLIONS_CORE_NODE",
+    "role": "runtime kernel",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "TRILLIONS_AI_NODE",
+    "role": "AI orchestration",
+    "status": "READY"
+  },
+  {
+    "name": "TRILLIONS_SOLVER_NODE",
+    "role": "scientific solver fabric",
+    "status": "READY"
+  },
+  {
+    "name": "TRILLIONS_BENCH_NODE",
+    "role": "benchmark replay",
+    "status": "READY"
+  },
+  {
+    "name": "TRILLIONS_NETWORK_NODE",
+    "role": "network fabric",
+    "status": "READY"
+  },
+  {
+    "name": "TRILLIONS_TELEMETRY_NODE",
+    "role": "health cockpit",
+    "status": "READY"
+  },
+  {
+    "name": "TRILLIONS_GPU_NODE",
+    "role": "GPU bridge",
+    "status": "UNAVAILABLE_IF_NO_GPU"
+  },
+  {
+    "name": "TRILLIONS_ASIC_NODE",
+    "role": "ASIC bridge",
+    "status": "EXTERNAL_BRIDGE_REQUIRED"
+  }
+]

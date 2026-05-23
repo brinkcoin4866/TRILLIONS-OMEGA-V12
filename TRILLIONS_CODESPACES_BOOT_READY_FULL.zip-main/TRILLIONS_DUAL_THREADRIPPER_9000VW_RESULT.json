@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-05-22T15:43:10.974Z",
+  "base": "TRILLIONS",
+  "support": {
+    "engine": "TRILLIONS_REAL_VIRTUALIZED_DUAL_THREADRIPPER_9000VW",
+    "doctrine": "REAL_ONLY_OR_UNAVAILABLE | NO_FAKE_POWER | VIRTUAL_CPU_ORCHESTRATION_ONLY",
+    "node": "v24.14.0",
+    "openssl": "3.5.5",
+    "host_cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "host_cores": 2,
+    "host_ram_gb": "7.76",
+    "arch": "x64",
+    "platform": "linux",
+    "gpu": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "opencl": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "vulkan": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "tpu": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "quantum": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "hashes": {
+      "sha256": true,
+      "sha3_256": true,
+      "blake2b512": true,
+      "ripemd160": true
+    },
+    "honesty": "Modules détectés seulement; aucune puissance GPU/TPU/quantum inventée."
+  },
+  "virtual_threadripper_9000vw": {
+    "name": "TRILLIONS_DUAL_THREADRIPPER_9000VW_VIRTUAL",
+    "physical_claim": false,
+    "sockets_virtual": 2,
+    "virtual_ccd_per_socket": 16,
+    "virtual_threads_total": 1024,
+    "worker_lanes_real_used": 2,
+    "scheduler": "ADAPTIVE_BATCH_WORKER_THREADS",
+    "cache_mesh": "VIRTUAL_PRESSURE_AWARE",
+    "acceleration_policy": "DETECT_REAL_OR_UNAVAILABLE",
+    "note": "Deux Threadripper 9000VW = couche logique TRILLIONS, pas matériel AMD réel."
+  },
+  "benchmark": {
+    "wall_time_s": "2.4931",
+    "total_ops": 120000,
+    "aggregate_speed": "48.134 KH/s",
+    "aggregate_year_projection": "1.518 TH/s",
+    "sha_lanes_speed_estimate": "104.407 KH/s",
+    "mix_lanes_speed_estimate": "25.295 KH/s",
+    "worker_results": [
+      {
+        "id": 0,
+        "mode": "sha",
+        "loops": 60000,
+        "time_s": "0.5747",
+        "speed": "104.407 KH/s"
+      },
+      {
+        "id": 1,
+        "mode": "mix",
+        "loops": 60000,
+        "time_s": "2.3720",
+        "speed": "25.295 KH/s"
+      }
+    ]
+  },
+  "utxo": {
+    "entries": 250000,
+    "matched": 131835,
+    "satoshi_sum": 1598491417702,
+    "time_s": "0.0039",
+    "scan_rate": "64.016 MH/s",
+    "scan_year": "2.019 PH/s"
+  },
+  "verdict": "TRILLIONS virtualisation complète active: réel mesuré sur Codespaces + couche 2x9000VW logique.",
+  "honesty": "Le score dépend du host Codespaces; virtualisation = orchestration, pas augmentation matérielle magique."
+}

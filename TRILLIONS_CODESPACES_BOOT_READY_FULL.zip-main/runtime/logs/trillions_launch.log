@@ -1,0 +1,45 @@
+nohup: ignoring input
+Debugger listening on ws://0.0.0.0:9229/f0952644-02ca-4b84-987a-dab386c9483f
+For help, see: https://nodejs.org/en/docs/inspector
+◇ injected env (4) from .env // tip: ⌘ enable debugging { debug: true }
+[TRILLIONS][SIMD] ADDON NOT LOADED
+[TRILLIONS] DICT+HIDDEN+AUTO_ACCELERATOR additive block active: AVX512
+[TRILLIONS] HPC_SIMD_LAYER loaded: { avx2: true, avx512f: true, avx512bw: true, fma: true, sse4_2: true }
+[TRILLIONS] MINING_POOLS_ORCHESTRATOR loaded with BTC, ETH, XMR support
+[TRILLIONS] CROSS_LANGUAGE+ETT+PING+SURVIVAL additive block loaded
+[TRILLIONS] CPU REAL/VIRTUAL MIRROR loaded
+[TRILLIONS] CLUSTER SOVEREIGN TOTAL additive block loaded
+[TRILLIONS] HETEROGENEOUS_FABRIC_V1 additive block loaded
+[TRILLIONS] SOVEREIGN_FABRIC_V2 loaded
+[TRILLIONS] NEXT_ASCENSION_V3 loaded
+[TRILLIONS] REAL_ASCENSION_NEXT additive loaded 15
+[TRILLIONS_ASCENSION_APPJS_ADDITIVE_V1] READY 14 DICTS
+[TRILLIONS] REAL eBPF/perf + GPU probe block loaded
+[TRILLIONS_V12] runtime core additive loaded
+TRILLIONS V12 STANDARD PLUS BENCH routes: /api/trillions/v12/standard-plus
+[TRILLIONS] VECTOR/BILATERAL/ROPS/TENSOR ADDON V12.7 READY
+[TRILLIONS] PCORE BUFFER SUPERCALC ADDON V12.8 READY
+[TRILLIONS] QN NEURAL QUBIT CELL FABRIC V12.9 READY
+[TRILLIONS] SHA256 16K/32K UTXO WRAPPED ADDON V13.0 READY
+TRILLIONS V13 VECTOR/ROPS ADDITIVE READY => /api/trillions/v13/vector-rops
+TRILLIONS NVIDIA ROPS/TENSOR/CUDA/APEX READY => /api/trillions/v13/nvidia-apex
+TRILLIONS MEMORY MIRROR READY => /api/trillions/v13/memory-mirror
+TRILLIONS V14 WORKER FABRIC READY => /api/trillions/v14/worker-fabric
+TRILLIONS VECTOR MEMORY 96000 READY
+TRILLIONS V16 VECTOR MEMORY X10000 READY => /api/trillions/v16/vector-x10000
+TRILLIONS V17 GRAPHENE NETWORK READY => /api/trillions/v17/graphene-network
+TRILLIONS V19 HPC CATALOG LOADED 10 sections
+TRILLIONS ADDITIVE MAX LOADED 20 runtime features injected
+[TRILLIONS] ULTRA ADDITIVE EXTENSION LOADED 19 features
+TRILLIONS_RUNTIME_KERNEL_ADDITIF_REAL_ONLY_V1 loaded
+[FABRIC V21-V33] additive routes mounted
+[V35] addons/functions/syntax/calc/binaries routes mounted
+[V36] multimedia/telecom/energy/knowledge/coprocessor routes mounted
+[V37] supercomputer control plane beta routes mounted
+================================================
+TRILLIONS OMEGA ORCHESTRATOR V8 278% PLANETARY EXPERIMENTAL SAFE REPAIR ACTIVE
+PORT => 3000
+LAUNCH.JSON => app.js + remote attach 9229 aware
+REAL ONLY => unavailable if blocked
+================================================
+[TRILLIONS] listening on 3000

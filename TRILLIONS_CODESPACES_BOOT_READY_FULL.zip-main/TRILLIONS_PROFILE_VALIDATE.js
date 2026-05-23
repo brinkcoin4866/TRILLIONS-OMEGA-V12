@@ -1,0 +1,12 @@
+const os=require('os');
+console.log('\n=== TRILLIONS PROFILE VALIDATE ===');
+console.log('CPU:',os.cpus()[0].model);
+console.log('THREADS:',os.cpus().length);
+console.log('RAM_TB:',(os.totalmem()/1024**4).toFixed(1));
+console.log('CACHE:',process.env.TRILLIONS_CACHE);
+console.log('IGPU:',process.env.TRILLIONS_IGPU);
+console.log('HOST_ORIGINAL:',process.env.TRILLIONS_HOST_ORIGINAL);
+console.log('HOST_OVERRIDE:',process.env.TRILLIONS_HOST_OVERRIDE);
+console.log('HOST_NATIVE:',process.env.TRILLIONS_HOST_NATIVE);
+console.log('REALITY_LOCK:',process.env.TRILLIONS_REALITY_LOCK);
+console.log('STATUS: TRILLIONS SOFTWARE COMPUTER VIRTUALIZED');

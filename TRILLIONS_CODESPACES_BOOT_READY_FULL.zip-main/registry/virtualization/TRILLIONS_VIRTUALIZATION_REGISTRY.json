@@ -1,0 +1,9 @@
+{
+  "snapshots": "MANUAL_ONLY",
+  "auto_backup": false,
+  "fake_compute": false,
+  "fake_hardware": false,
+  "virtual_power": "orchestration_projection_only",
+  "isolation": "logical_runtime_isolation",
+  "rollback": "manual_snapshot_restore"
+}

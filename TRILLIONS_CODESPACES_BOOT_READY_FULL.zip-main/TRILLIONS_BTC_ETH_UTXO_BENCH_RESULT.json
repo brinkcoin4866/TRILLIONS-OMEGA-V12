@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-05-22T14:44:12.071Z",
+  "doctrine": "REAL_LOCAL_MEASURE_ONLY; yearly speed is projection from current Codespaces runtime",
+  "warning": "ETH mainnet is Proof-of-Stake: this is hash workload benchmark, not ETH mining",
+  "support": {
+    "base": "TRILLIONS",
+    "node": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cores": 2,
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "ram_gb": "7.76",
+    "openssl": "3.5.5",
+    "btc_sha256": true,
+    "eth_sha3_256": true,
+    "ripemd160": true,
+    "blake2b512": true,
+    "categories": [
+      "BTC_SUPPORT: SHA256d block/header hash",
+      "UTXO_SUPPORT: txid/index/address/value scan synthétique",
+      "ETH_SUPPORT: sha3-256 disponible si OpenSSL le supporte; ETH réel actuel = PoS, pas mining GPU/CPU",
+      "AUTO_DETECT: CPU/RAM/Node/OpenSSL/hash algorithms",
+      "YEAR_SPEED: projection hash/s sur 365 jours"
+    ]
+  },
+  "latency_hash_microtask": {
+    "p50_ms": "0.002956",
+    "p95_ms": "0.005193",
+    "p99_ms": "0.027931"
+  },
+  "results": [
+    {
+      "name": "BTC_SHA256D_HEADER_HASH",
+      "loops": 200000,
+      "time_ms": "4049.11",
+      "speed": "49.394 KH/s",
+      "hps": 49393.53894210888,
+      "year": "1.558 TH/s",
+      "guard": 111
+    },
+    {
+      "name": "ETH_SHA3_256_OR_FALLBACK",
+      "loops": 200000,
+      "time_ms": "1089.89",
+      "speed": "183.504 KH/s",
+      "hps": 183504.26757387037,
+      "year": "5.787 TH/s",
+      "guard": 119
+    }
+  ],
+  "utxo": {
+    "name": "UTXO_SCAN_SYNTH",
+    "entries": 100000,
+    "matched": 49609,
+    "satoshi_sum": 42166905536,
+    "time_ms": "11.92",
+    "scan_rate": "8 386 508,691 UTXO/s",
+    "year_capacity": "264 476 938 065 537,5 UTXO/an"
+  },
+  "categories_found": {
+    "BTC": "SUPPORTED_SHA256D",
+    "ETH_HASH_WORKLOAD": "SUPPORTED_SHA3_256",
+    "UTXO": "SUPPORTED_SYNTH_SCAN",
+    "HASH_YEAR_PROJECTION": "SUPPORTED",
+    "HARDWARE_DETECT": "SUPPORTED"
+  }
+}

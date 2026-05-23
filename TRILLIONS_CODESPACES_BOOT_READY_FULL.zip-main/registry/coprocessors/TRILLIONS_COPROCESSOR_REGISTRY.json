@@ -1,0 +1,12 @@
+{
+  "cpu_coprocessor": "ACTIVE",
+  "sha256_coprocessor": "ACTIVE",
+  "matrix_coprocessor": "ACTIVE",
+  "fft_coprocessor": "READY",
+  "ai_coprocessor": "READY_IF_PROVIDER",
+  "gpu_coprocessor": "UNAVAILABLE_IF_NO_GPU",
+  "asic_goldshell_xt": "EXTERNAL_BRIDGE_REQUIRED",
+  "frontier_reference": "CATALOGUE_ONLY",
+  "heijad_solver": "CATALOGUE_SOFTWARE",
+  "captain_scheduler": "ACTIVE_ORCHESTRATION_LABEL"
+}

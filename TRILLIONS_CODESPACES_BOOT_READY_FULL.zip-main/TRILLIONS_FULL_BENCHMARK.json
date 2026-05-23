@@ -1,0 +1,431 @@
+{
+  "timestamp": "2026-05-22T14:10:42.209Z",
+  "gpu": {
+    "time": "2026-05-22T14:10:42.287Z",
+    "module": {
+      "status": "OPTIONAL_UNAVAILABLE_UNLESS_DETECTED",
+      "route": "/api/benchmark/gpu/probe",
+      "honesty": "nvidia-smi/WebGPU/OpenCL detection only; no fake GPU compute"
+    },
+    "nvidia_smi": "unavailable",
+    "opencl": "",
+    "vulkan": "",
+    "status": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "honesty": "GPU detection only; no GPU FLOPS claim without real compute kernel"
+  },
+  "instant": {
+    "time": "2026-05-22T14:10:42.845Z",
+    "mode": "INSTANT_SCORE",
+    "verdict": "INSTANT_SCORE_READY",
+    "band": "MFLOPS_RANGE",
+    "stability_percent": 8.08,
+    "stability_label": "VARIABLE",
+    "avg_gflops": 0.095899,
+    "best_gflops": 0.14105,
+    "score_1000": 126,
+    "health": "LOW_OR_CONSTRAINED",
+    "raw": {
+      "time": "2026-05-22T14:10:42.845Z",
+      "engine": "WORKER_THREADS_FLOPS_LIBRE",
+      "level": "instant",
+      "config": {
+        "workers": 2,
+        "iterations": 750000,
+        "rounds": 3
+      },
+      "summary": {
+        "avg_gflops": 0.095899,
+        "best_gflops": 0.14105,
+        "worst_gflops": 0.052895
+      },
+      "results": [
+        {
+          "round": 1,
+          "workers": 2,
+          "iterations_per_worker": 750000,
+          "operations_estimated": 15000000,
+          "duration_ms": 283.582,
+          "gflops": 0.052895,
+          "checksum": 370803310.699398,
+          "parts": [
+            {
+              "ok": true,
+              "iterations": 750000,
+              "operations_estimated": 7500000,
+              "duration_ms": 138.39,
+              "checksum": 185401655.349699
+            },
+            {
+              "ok": true,
+              "iterations": 750000,
+              "operations_estimated": 7500000,
+              "duration_ms": 129.854,
+              "checksum": 185401655.349699
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "workers": 2,
+          "iterations_per_worker": 750000,
+          "operations_estimated": 15000000,
+          "duration_ms": 159.995,
+          "gflops": 0.093753,
+          "checksum": 370803310.699398,
+          "parts": [
+            {
+              "ok": true,
+              "iterations": 750000,
+              "operations_estimated": 7500000,
+              "duration_ms": 55.08,
+              "checksum": 185401655.349699
+            },
+            {
+              "ok": true,
+              "iterations": 750000,
+              "operations_estimated": 7500000,
+              "duration_ms": 46.965,
+              "checksum": 185401655.349699
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "workers": 2,
+          "iterations_per_worker": 750000,
+          "operations_estimated": 15000000,
+          "duration_ms": 106.346,
+          "gflops": 0.14105,
+          "checksum": 370803310.699398,
+          "parts": [
+            {
+              "ok": true,
+              "iterations": 750000,
+              "operations_estimated": 7500000,
+              "duration_ms": 62.35,
+              "checksum": 185401655.349699
+            },
+            {
+              "ok": true,
+              "iterations": 750000,
+              "operations_estimated": 7500000,
+              "duration_ms": 54.218,
+              "checksum": 185401655.349699
+            }
+          ]
+        }
+      ],
+      "dict_interpretation": {
+        "dict": {
+          "name": "DICT_FLOPS_LIBRE",
+          "version": "V1_BENCHMARK_ROUTING_DICTIONARY",
+          "doctrine": "REAL_ONLY_OR_UNAVAILABLE + NO_FAKE_FLOPS + NO_FAKE_POWER",
+          "aliases": [
+            "flops",
+            "flops libre",
+            "benchmark flops",
+            "gflops",
+            "tflops",
+            "mflops",
+            "floating point",
+            "calcul brut",
+            "puissance calcul",
+            "micro benchmark",
+            "bench libre"
+          ],
+          "routes": [
+            "/api/benchmark/flops-libre",
+            "/api/benchmark/flops-libre/dict",
+            "/api/benchmark/flops-libre/report",
+            "/api/benchmark/instant-score",
+            "/api/benchmark/power-catalog",
+            "/api/benchmark/flops-libre/boost",
+            "/api/benchmark/flops-libre/boost-report",
+            "/api/benchmark/flops-libre/workers",
+            "/api/benchmark/flops-libre/vectorized",
+            "/api/orchestrator-intelligent/catalog",
+            "/api/orchestrator-intelligent/health",
+            "/api/orchestrator-intelligent/stress",
+            "/api/orchestrator-intelligent/score",
+            "/api/orchestrator-intelligent/script",
+            "/api/hpc-zeta/catalog",
+            "/api/hpc-zeta/probe",
+            "/api/hpc-zeta/health",
+            "/api/hpc-zeta/stress",
+            "/api/hpc-zeta/gpu-probe",
+            "/api/hpc-zeta/cpu-vector-probe",
+            "/api/hpc-zeta/memory-pool-probe",
+            "/api/hpc-zeta/thermal",
+            "/api/hpc-zeta/worker-pool-probe",
+            "/api/hybrid-hpc/catalog",
+            "/api/hybrid-hpc/probe",
+            "/api/hybrid-hpc/phase1",
+            "/api/hybrid-hpc/phase2",
+            "/api/hybrid-hpc/phase3",
+            "/api/hybrid-hpc/phase4",
+            "/api/hybrid-hpc/stress",
+            "/api/hybrid-hpc/score",
+            "/api/hybrid-hpc/script"
+          ],
+          "metrics": {
+            "raw": [
+              "iterations",
+              "operations_estimated",
+              "duration_ms",
+              "checksum"
+            ],
+            "normalized": [
+              "mflops",
+              "gflops",
+              "tflops"
+            ],
+            "quality": [
+              "rounds",
+              "best_gflops",
+              "avg_gflops",
+              "worst_gflops",
+              "stability_percent",
+              "score_instant_1000",
+              "worker_threads_best_gflops",
+              "vectorized_best_gflops",
+              "jit_warmup",
+              "anti_noise_median",
+              "orchestrator_score_1000",
+              "hyper_stress_score_1000",
+              "event_loop_latency",
+              "memory_pressure_controller",
+              "work_stealing_batches",
+              "hpc_zeta_score_1000",
+              "gpu_compute_status",
+              "wasm_simd_status",
+              "native_addon_status",
+              "zero_copy_status",
+              "thermal_status",
+              "hybrid_hpc_score_1000",
+              "phase1_wasm_shared_workers",
+              "phase2_native_avx_numa",
+              "phase3_gpu_tensor",
+              "phase4_hybrid_runtime"
+            ],
+            "host": [
+              "logical_cpus",
+              "ram_GB",
+              "node",
+              "platform",
+              "arch"
+            ]
+          },
+          "score_bands": [
+            {
+              "min_gflops": 0,
+              "label": "MFLOPS_RANGE",
+              "interpretation": "faible ou environnement très limité"
+            },
+            {
+              "min_gflops": 1,
+              "label": "GFLOPS_RANGE",
+              "interpretation": "calcul local JavaScript correct"
+            },
+            {
+              "min_gflops": 10,
+              "label": "HIGH_GFLOPS_RANGE",
+              "interpretation": "bon débit local JS / JIT favorable"
+            },
+            {
+              "min_gflops": 100,
+              "label": "VERY_HIGH_JS_RANGE",
+              "interpretation": "résultat élevé, à confirmer par répétition"
+            },
+            {
+              "min_gflops": 1000,
+              "label": "TFLOPS_RANGE_WARNING",
+              "interpretation": "suspect en JS pur ; vérifier mesure, durée, moteur et host"
+            }
+          ],
+          "honesty": {
+            "not_linpack": true,
+            "not_hpl": true,
+            "not_hpc_ranking": true,
+            "local_js_estimate_only": true,
+            "compare_only_same_method": true
+          }
+        },
+        "classification": {
+          "domain": "BENCHMARK",
+          "subdomain": "FLOPS_LIBRE",
+          "band": "MFLOPS_RANGE",
+          "interpretation": "faible ou environnement très limité",
+          "stability_percent": 8.08,
+          "stability_label": "VARIABLE"
+        },
+        "normalized_score": {
+          "avg_gflops": 0.095899,
+          "best_gflops": 0.14105,
+          "local_score_1000": 1,
+          "same_method_compare_only": true
+        },
+        "warnings": [
+          "Ce benchmark mesure un workload JavaScript local estimé.",
+          "Comparer seulement avec le même endpoint, même size, mêmes rounds.",
+          "Ce n'est pas un score LINPACK/HPL officiel.",
+          "Aucune puissance matérielle fictive n'est revendiquée."
+        ]
+      },
+      "score_instant_1000": 126,
+      "honesty": "parallel worker_threads benchmark on real host only"
+    },
+    "honesty": "instant score is a local bounded worker_threads micro-benchmark"
+  },
+  "boost": {
+    "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+  },
+  "report": {
+    "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+  },
+  "workers": {
+    "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+  },
+  "power": {
+    "time": "2026-05-22T14:10:43.055Z",
+    "catalog": {
+      "name": "FLOPS_LIBRE_POWER_CATALOG",
+      "version": "V2_WASM_SIMD_WORKERS_SHARED_BATCH_VECTOR_NATIVE_GPU_JIT_NOISE",
+      "doctrine": "REAL_ONLY_OR_UNAVAILABLE + NO_FAKE_FLOPS + NO_FAKE_POWER + SAFE_BOUNDED_COMPUTE",
+      "purpose": "increase benchmark truth and throughput by real runtime techniques only",
+      "modules": {
+        "WASM_SIMD": {
+          "status": "PROBE_ONLY",
+          "route": "/api/benchmark/wasm-simd/probe",
+          "honesty": "detects WebAssembly/SIMD capability; does not fake WASM FLOPS"
+        },
+        "WORKER_THREADS": {
+          "status": "REAL_IF_NODE_WORKER_THREADS",
+          "route": "/api/benchmark/flops-libre/workers",
+          "honesty": "parallel Node.js workers measured on host"
+        },
+        "SHARED_ARRAY_BUFFER": {
+          "status": "REAL_IF_GLOBAL_AVAILABLE",
+          "route": "/api/benchmark/shared-array-buffer/probe",
+          "honesty": "memory primitive probe and tiny atomic timing only"
+        },
+        "BATCH_COMPUTE": {
+          "status": "REAL_JS",
+          "route": "/api/benchmark/flops-libre/boost",
+          "honesty": "multiple bounded batches, measured wall time"
+        },
+        "VECTORIZED_MATH": {
+          "status": "REAL_TYPED_ARRAY_JS",
+          "route": "/api/benchmark/flops-libre/vectorized",
+          "honesty": "Float64Array workload; vectorized data layout, not CPU AVX claim"
+        },
+        "ADAPTIVE_SCHEDULER": {
+          "status": "REAL_JS_POLICY",
+          "route": "/api/benchmark/flops-libre/boost-report",
+          "honesty": "selects safe worker/iteration profile from host pressure"
+        },
+        "NATIVE_ADDON_NODE": {
+          "status": "OPTIONAL_UNAVAILABLE_UNLESS_BUILT",
+          "route": "/api/benchmark/native-addon/probe",
+          "honesty": "only reports node-gyp/native addon availability; no fake native speed"
+        },
+        "GPU_COMPUTE_OPTIONAL": {
+          "status": "OPTIONAL_UNAVAILABLE_UNLESS_DETECTED",
+          "route": "/api/benchmark/gpu/probe",
+          "honesty": "nvidia-smi/WebGPU/OpenCL detection only; no fake GPU compute"
+        },
+        "CACHE_WARMUP_JIT": {
+          "status": "REAL_JS",
+          "route": "/api/benchmark/flops-libre/warmup",
+          "honesty": "warmup before score to reduce JIT cold-start noise"
+        },
+        "ANTI_NOISE_AVERAGING": {
+          "status": "REAL_STATISTICS",
+          "route": "/api/benchmark/instant-score",
+          "honesty": "median/best/worst/stability from repeated measured samples"
+        }
+      },
+      "limits": {
+        "max_workers": 2,
+        "max_iterations_per_worker": 50000000,
+        "max_rounds": 15,
+        "default_level": "standard"
+      }
+    },
+    "detected": {
+      "wasm_simd": {
+        "time": "2026-05-22T14:10:42.893Z",
+        "module": {
+          "status": "PROBE_ONLY",
+          "route": "/api/benchmark/wasm-simd/probe",
+          "honesty": "detects WebAssembly/SIMD capability; does not fake WASM FLOPS"
+        },
+        "wasm_basic": true,
+        "simd_probe": "SIMD_VALIDATE_FALSE",
+        "honesty": "probe only; no fake WASM benchmark"
+      },
+      "shared_array_buffer": {
+        "time": "2026-05-22T14:10:42.897Z",
+        "module": {
+          "status": "REAL_IF_GLOBAL_AVAILABLE",
+          "route": "/api/benchmark/shared-array-buffer/probe",
+          "honesty": "memory primitive probe and tiny atomic timing only"
+        },
+        "available": true,
+        "result": {
+          "atomic_adds": 100000,
+          "duration_ms": 3.753,
+          "ops_per_sec": 26642170.08,
+          "final": 100000
+        }
+      },
+      "gpu": {
+        "time": "2026-05-22T14:10:42.950Z",
+        "module": {
+          "status": "OPTIONAL_UNAVAILABLE_UNLESS_DETECTED",
+          "route": "/api/benchmark/gpu/probe",
+          "honesty": "nvidia-smi/WebGPU/OpenCL detection only; no fake GPU compute"
+        },
+        "nvidia_smi": "unavailable",
+        "opencl": "",
+        "vulkan": "",
+        "status": "UNAVAILABLE_OR_NOT_INSTALLED",
+        "honesty": "GPU detection only; no GPU FLOPS claim without real compute kernel"
+      },
+      "native_addon": {
+        "time": "2026-05-22T14:10:43.055Z",
+        "module": {
+          "status": "OPTIONAL_UNAVAILABLE_UNLESS_BUILT",
+          "route": "/api/benchmark/native-addon/probe",
+          "honesty": "only reports node-gyp/native addon availability; no fake native speed"
+        },
+        "node_gyp": "v12.3.0",
+        "python": "Python 3.12.1",
+        "make": "GNU Make 4.3",
+        "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "status": "BUILD_CHAIN_DETECTED",
+        "honesty": "build-chain probe only; no native addon benchmark unless compiled"
+      }
+    },
+    "routes": [
+      "/api/benchmark/instant-score",
+      "/api/benchmark/flops-libre/boost",
+      "/api/benchmark/flops-libre/boost-report",
+      "/api/benchmark/flops-libre/workers",
+      "/api/benchmark/flops-libre/vectorized",
+      "/api/benchmark/power-catalog"
+    ],
+    "verdict": "POWER_CATALOG_READY_REAL_OR_UNAVAILABLE"
+  },
+  "btc_earnings": {
+    "codespaces": {
+      "hashrate": 0,
+      "btc_per_year": 0,
+      "usd_per_year": 0
+    },
+    "ryzen": {
+      "hashrate": 0,
+      "btc_per_year": 0,
+      "usd_per_year": 0
+    }
+  }
+}

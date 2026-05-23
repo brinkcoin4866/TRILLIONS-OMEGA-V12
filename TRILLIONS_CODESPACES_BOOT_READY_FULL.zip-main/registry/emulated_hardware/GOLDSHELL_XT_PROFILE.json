@@ -1,0 +1,6 @@
+{
+  "status": "EMULATED_PROFILE",
+  "role": "ASIC catalogue / bridge target",
+  "bridge": "external device required",
+  "honesty": "catalogue and routing only"
+}

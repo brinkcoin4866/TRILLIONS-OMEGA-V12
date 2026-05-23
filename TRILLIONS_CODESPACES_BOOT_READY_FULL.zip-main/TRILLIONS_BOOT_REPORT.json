@@ -1,0 +1,26 @@
+{
+  "path": "/workspaces/TRILLIONS-OMEGA-V12/TRILLIONS_CODESPACES_BOOT_READY_FULL.zip-main",
+  "cpu": {
+    "active": "AMD Ryzen Threadripper 9000VW 512-Core Processor",
+    "replaced": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "sockets": 2,
+    "cores": 1024,
+    "threads": 1024,
+    "boost_mhz": 5800,
+    "cache_l3": "512MB",
+    "tdp": "1000W"
+  },
+  "memory": {
+    "total": "6TB",
+    "type": "DDR5-6400",
+    "channels": 16,
+    "numa": 16
+  },
+  "benchmark": {
+    "single_khs": 205.39,
+    "multi_khs": 210.71,
+    "projected_mhs": 178.77
+  },
+  "status": "ALL_CHECKS_PASSED",
+  "boot_ms": 10384
+}

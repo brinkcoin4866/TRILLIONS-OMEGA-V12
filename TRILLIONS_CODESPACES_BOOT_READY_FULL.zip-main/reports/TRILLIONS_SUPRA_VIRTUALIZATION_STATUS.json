@@ -1,0 +1,91 @@
+{
+  "time": "2026-05-22T08:54:22.003Z",
+  "doctrine": "REAL_ONLY_OR_UNAVAILABLE",
+  "mode": "SUPRA_VIRTUALIZATION",
+  "host": {
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "logical_cpus": 2,
+    "arch": "x64",
+    "platform": "linux",
+    "ram_total_gb": 7.76,
+    "ram_free_gb": 1.09,
+    "uptime_sec": 9730
+  },
+  "virtual_nodes": [
+    {
+      "name": "TRILLIONS_CORE_NODE",
+      "role": "runtime kernel",
+      "status": "ACTIVE"
+    },
+    {
+      "name": "TRILLIONS_AI_NODE",
+      "role": "AI orchestration",
+      "status": "READY"
+    },
+    {
+      "name": "TRILLIONS_SOLVER_NODE",
+      "role": "scientific solver fabric",
+      "status": "READY"
+    },
+    {
+      "name": "TRILLIONS_BENCH_NODE",
+      "role": "benchmark replay",
+      "status": "READY"
+    },
+    {
+      "name": "TRILLIONS_NETWORK_NODE",
+      "role": "network fabric",
+      "status": "READY"
+    },
+    {
+      "name": "TRILLIONS_TELEMETRY_NODE",
+      "role": "health cockpit",
+      "status": "READY"
+    },
+    {
+      "name": "TRILLIONS_GPU_NODE",
+      "role": "GPU bridge",
+      "status": "UNAVAILABLE_IF_NO_GPU"
+    },
+    {
+      "name": "TRILLIONS_ASIC_NODE",
+      "role": "ASIC bridge",
+      "status": "EXTERNAL_BRIDGE_REQUIRED"
+    }
+  ],
+  "mirrors": {
+    "runtime_mirror": "ACTIVE",
+    "memory_mirror": "ACTIVE",
+    "disk_mirror": "ACTIVE",
+    "cache_mirror": "ACTIVE",
+    "workload_mirror": "ACTIVE",
+    "ui_mirror": "ACTIVE",
+    "telemetry_mirror": "ACTIVE",
+    "solver_mirror": "ACTIVE"
+  },
+  "coprocessors": {
+    "cpu_coprocessor": "ACTIVE",
+    "sha256_coprocessor": "ACTIVE",
+    "matrix_coprocessor": "ACTIVE",
+    "fft_coprocessor": "READY",
+    "ai_coprocessor": "READY_IF_PROVIDER",
+    "gpu_coprocessor": "UNAVAILABLE_IF_NO_GPU",
+    "asic_goldshell_xt": "EXTERNAL_BRIDGE_REQUIRED",
+    "frontier_reference": "CATALOGUE_ONLY",
+    "heijad_solver": "CATALOGUE_SOFTWARE",
+    "captain_scheduler": "ACTIVE_ORCHESTRATION_LABEL"
+  },
+  "virtualization": {
+    "snapshots": "MANUAL_ONLY",
+    "auto_backup": false,
+    "fake_compute": false,
+    "fake_hardware": false,
+    "virtual_power": "orchestration_projection_only",
+    "isolation": "logical_runtime_isolation",
+    "rollback": "manual_snapshot_restore"
+  },
+  "benchmark": {
+    "sha256_hs": 191721,
+    "honesty": "local Codespaces benchmark only"
+  }
+}

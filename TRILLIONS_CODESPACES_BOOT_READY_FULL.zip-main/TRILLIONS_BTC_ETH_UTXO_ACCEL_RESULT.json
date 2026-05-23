@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-05-22T15:36:58.781Z",
+  "doctrine": "REAL_LOCAL_MEASURE_ONLY | REAL_OR_UNAVAILABLE | NO_FAKE_GPU_CPU",
+  "base": "TRILLIONS",
+  "support": {
+    "engine": "TRILLIONS_ACCEL_AUTO_DETECT",
+    "node": "v24.14.0",
+    "openssl": "3.5.5",
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "cores": 2,
+    "arch": "x64",
+    "platform": "linux",
+    "ram_gb": "7.76",
+    "gpu": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "opencl": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "vulkan": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "tpu": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "quantum": "UNAVAILABLE_OR_NOT_INSTALLED",
+    "hashes": {
+      "sha256": true,
+      "sha3_256": true,
+      "ripemd160": true,
+      "blake2b512": true
+    },
+    "honesty": "GPU/TPU/quantum detection only; no fake accelerator FLOPS or hash claim"
+  },
+  "categories": {
+    "BTC": "SHA256D_HEADER_HASH",
+    "ETH": "SHA3_256_IF_AVAILABLE_ELSE_SHA256_WORKLOAD; ETH_MAINNET_IS_POS",
+    "UTXO": "SYNTHETIC_LOCAL_SCAN",
+    "ACCEL": "GPU_TPU_QUANTUM_ACCELERATOR_DETECTION_ONLY"
+  },
+  "benchmarks": [
+    {
+      "name": "BTC_SHA256D",
+      "loops": 300000,
+      "time_s": "1.3612",
+      "speed": "220.400 KH/s",
+      "hash_per_second": 220399.65308595035,
+      "hash_per_year": "6.951 TH/s",
+      "guard": 142
+    },
+    {
+      "name": "ETH_SHA3_256_OR_FALLBACK",
+      "loops": 300000,
+      "time_s": "1.1344",
+      "speed": "264.458 KH/s",
+      "hash_per_second": 264457.68197362183,
+      "hash_per_year": "8.340 TH/s",
+      "guard": 147
+    }
+  ],
+  "utxo": {
+    "name": "UTXO_SYNTH_SCAN",
+    "entries": 150000,
+    "matched": 79101,
+    "satoshi_sum": 575457728688,
+    "time_s": "0.0077",
+    "scan_rate": "19 564 734,227 UTXO/s",
+    "scan_year": "616 993 458 596 304,2 UTXO/an"
+  },
+  "latency": {
+    "p50_ms": "0.002702",
+    "p95_ms": "0.005035",
+    "p99_ms": "0.012091"
+  }
+}

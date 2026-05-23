@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-05-22T15:53:23.311Z",
+  "base": "TRILLIONS",
+  "doctrine": "REAL_CODESPACES_MEASURE_ONLY | FRONTIER_THEORETICAL_REFERENCE | NO_FAKE_POWER",
+  "host": {
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "threads": 2,
+    "ram_gb": "7.76",
+    "node": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "virtual_boot_cpu": {
+    "system": "TRILLIONS",
+    "processor": "DUAL_THREADRIPPER_9000VW",
+    "mode": "NATIVE_VIRTUALIZED_TOPOLOGY",
+    "execution": "REAL_CODESPACES_HOST"
+  },
+  "same_calculation": "UTXO_GENERATE_HASH_FILTER_SUM",
+  "trillions_real_codespaces": {
+    "entries": 500000,
+    "time_s": "3.598726",
+    "speed": "138.938058 Kops/s",
+    "yearly_projection": "4.381551 Tops/s",
+    "matched": 250000,
+    "satoshi_sum": "6062706374612",
+    "guard": 185
+  },
+  "frontier_reference": {
+    "reference": "FRONTIER_THEORETICAL_REFERENCE_CONFIGURABLE",
+    "frontier_ref_ops_s": 1102000000000000000,
+    "same_utxo_entries": 500000,
+    "ideal_time_s": 4.5372050816696916e-13,
+    "ideal_rate": "1.102000 Eops/s",
+    "note": "Comparaison théorique; Frontier n'exécute pas ce script Codespaces."
+  },
+  "duel": {
+    "frontier_ideal_seconds": "4.537205e-13",
+    "trillions_real_seconds": "3.598726",
+    "frontier_theoretical_ratio": "7.931592e+12",
+    "honest_winner": "FRONTIER_THEORETICAL_ON_RAW_OPS",
+    "trillions_advantage": "orchestration, audit, portability, Codespaces execution, not raw exascale silicon"
+  }
+}

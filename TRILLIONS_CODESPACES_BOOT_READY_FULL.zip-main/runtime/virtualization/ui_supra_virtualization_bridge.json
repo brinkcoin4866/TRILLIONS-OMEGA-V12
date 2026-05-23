@@ -1,0 +1,19 @@
+{
+  "status":"ACTIVE",
+  "ui_panel":"SUPRA_VIRTUALIZATION_FABRIC",
+  "routes_to_use":[
+    "/api/system",
+    "/api/cockpit",
+    "/api/capacity",
+    "/api/workload",
+    "/api/repo"
+  ],
+  "local_reports":[
+    "reports/TRILLIONS_SUPRA_VIRTUALIZATION_STATUS.json",
+    "registry/virtualization/TRILLIONS_VIRTUALIZATION_REGISTRY.json",
+    "registry/mirrors/TRILLIONS_MIRROR_REGISTRY.json",
+    "registry/coprocessors/TRILLIONS_COPROCESSOR_REGISTRY.json",
+    "runtime/virtual_nodes/TRILLIONS_VIRTUAL_NODES.json"
+  ],
+  "honesty":"virtual mirrors and coprocessors are orchestration layers, not fake hardware."
+}

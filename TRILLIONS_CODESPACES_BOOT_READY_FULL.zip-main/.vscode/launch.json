@@ -1,38 +1,36 @@
 {
-    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
-    // Pointez pour afficher la description des attributs existants.
-    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/app.js",
-            "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "node"
-        },
-        {
-            "address": "TCP/IP address of process to be debugged",
-            "localRoot": "${workspaceFolder}",
-            "name": "Attach to Remote",
-            "port": 9229,
-            "remoteRoot": "Absolute path to the remote directory containing the program",
-            "request": "attach",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "node"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Lancer le programme",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${file}"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "name": "TRILLIONS OMEGA V12",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/app.js",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "restart": true,
+      "runtimeExecutable": "node",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "env": {
+        "NODE_ENV": "development",
+        "TRILLIONS_MODE": "OMEGA_V12",
+        "REALITY_LOCK": "true",
+        "REAL_ONLY_OR_UNAVAILABLE": "true"
+      }
+    },
+
+    {
+      "name": "TRILLIONS ATTACH",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "restart": true,
+      "protocol": "inspector"
+    }
+
+  ]
 }
